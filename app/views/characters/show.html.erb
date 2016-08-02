@@ -1,5 +1,5 @@
-<h1><%= @house.name %></h1>
-<% @house.characters.each do |character| %>
+<h1><%= @character.name %></h1>
+<% characters.each do |character| %>
   <div class="character">
     <h2><%= link_to character.name, character_path(character) %></h2>
     <img src="<%= image_tag character.img_url %>">

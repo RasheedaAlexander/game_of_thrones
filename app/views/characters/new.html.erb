@@ -1,12 +1,6 @@
-<img src="<%="http://img.cinemablend.com/cb/1/1/5/4/0/8/a1154086d8a1f5b453bbc9fd840e6910b22e82e9c9ffa848ec1d8d301799fe30c.jpg" %>">
+<img class="throne" src="<%="http://img.cinemablend.com/cb/1/1/5/4/0/8/a1154086d8a1f5b453bbc9fd840e6910b22e82e9c9ffa848ec1d8d301799fe30c.jpg" %>">
 
 <h2>New Character</h2>
 <%= form_for @character do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<%= f.label :img_url %>
-<%= f.text_field :img_url %>
-<%= f.label :house_id %>
-<%= f.text_field :house_id %>
-<%= f.submit %>
+<%= render 'form' %>
 <% end %>

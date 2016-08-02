@@ -1,21 +1,21 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
 body {
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%), url("http://widewallpaper.info/wp-content/uploads/2016/03/Game-of-thrones-Wallpaper-50.jpg");
-  background-size: cover;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%), url("http://cdn.pcwallart.com/images/game-of-thrones-logo-wallpaper-4.jpg");
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 h1,h2,h3 {
@@ -32,4 +32,23 @@ h2 {
 }
 h1,h2,h3,p {
   text-align: center;
+}
+.house {
+  width: 48%;
+  padding: 50px;
+  margin: 5px;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+}
+.house:last-child {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+img {
+  width: 50%;
+}
+label {
+  color: white;
 }

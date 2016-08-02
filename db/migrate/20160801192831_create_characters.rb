@@ -4,7 +4,6 @@ class CreateCharacters < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :img_url
       t.references :house, index: true, foreign_key: true
-      t.timestamps null: false
     end
   end
 end

@@ -4,7 +4,6 @@ class CreateHouses < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :banner_url
       t.string :quote
-      t.timestamps null: false
     end
   end
 end

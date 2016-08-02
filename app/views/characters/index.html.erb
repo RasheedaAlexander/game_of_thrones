@@ -3,6 +3,12 @@
   <div class="character">
 <h2><%= link_to character.name, character_path(character) %>
 </h2>
+<p>
+      <%= link_to 'Delete Character', character_path(character),
+      method: :delete %>
+    </p>
+  </li>
 <img src="<%= character.img_url %>"/>
 <% end %>
 </div>
+<h2><%= link_to "CREATE CHARACTER", new_character_path %></h2>
