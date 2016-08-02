@@ -30,24 +30,33 @@ h1 {
 h2 {
   font-size: 48px;
 }
+h3 {
+ font-style: italic;
+}
 h1,h2,h3,p {
   text-align: center;
 }
 .house {
   width: 48%;
-  padding: 50px;
+  height: 567px;
   margin: 5px;
   box-sizing: border-box;
   display: inline-block;
   text-align: center;
+  background-color: rgba(255,0,0,0.3);
+  border: 4px solid white;
+  vertical-align: top;
 }
 .house:last-child {
   margin: 0 auto;
   text-align: center;
   width: 100%;
+  overflow: visible;
 }
 img {
   width: 50%;
+  margin: 0 auto;
+  display: block;
 }
 label {
   color: white;
