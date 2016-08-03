@@ -1,14 +1,15 @@
-<h1>Characters</h1>
-<% @characters.each do |character| %>
-  <div class="character">
-<h2><%= link_to character.name, character_path(character) %>
-</h2>
-<p>
-      <%= link_to 'Delete Character', character_path(character),
-      method: :delete %>
-    </p>
+<h2>Characters <%= link_to "(+)", new_house_character_path(@house)%></h2>
+<ul>
+  <% @characters.each do |character| %>
+  <h2><%=character.name%></h2
+  <li>
+    <%= link_to "#{character.name}", house_character_path(@house, @character) %>
   </li>
-<img src="<%= character.img_url %>"/>
-<% end %>
-</div>
-<h2><%= link_to "CREATE CHARACTER", new_character_path %></h2>
+  <li>
+    <%= link_to "Create Character", new_house_character_path(@house, @character) %>
+  </li>
+  <img src="<%= image_tag character.img_url %>">
+
+
+  <% end %>
+</ul>

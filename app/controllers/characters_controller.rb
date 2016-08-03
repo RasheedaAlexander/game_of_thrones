@@ -1,44 +1,51 @@
 class CharactersController < ApplicationController
-  before_action :set_character, only: [:show, :destroy, :update, :edit]
 
   def index
+    @houses = House.all
     @characters = Character.all
   end
 
-  def show
+  def all_characters
+    @characters = Character.all
   end
 
   def new
-    @character = Character.new
+    @house = House.find(params[:house_id])
+    @character = @house.characters.build
   end
 
-    def update
-      if @character.save
-        redirect_to characters_path
-      end
-    end
-    
-  # app/controllers/characters_controller.rb
   def create
-    @character = Character.create(character_params)
-    redirect_to @character
+    if params[:character][:house] == ""
+      flash[:alert] = "House can't be blank!"
+      redirect_to characters_path
+    else
+      @character = Character.create(character_params)
+      redirect_to characters_path
+    end
   end
 
-  def destroy
-    @character.destroy
-    redirect_to characters_path
+  def show
+    @character = Character.find(params[:id])
   end
 
   def edit
+    @character = Character.find(params[:id])
+  end
+
+  def update
+    @character = Character.find(params[:id])
+    @character.update(character_params)
+  end
+
+  def destroy
+    @character = Character.find(params[:id])
+    @character.destroy
+    redirect_to characters_path
   end
 
   private
 
   def character_params
     params.require(:character).permit(:name, :img_url)
-  end
-
-  def set_character
-    @character = Character.find(params[:id])
   end
 end

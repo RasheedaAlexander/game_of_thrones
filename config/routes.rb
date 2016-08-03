@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   resources :houses do
     resources :characters
   end
-  
-  resources :characters
 
+get "characters", to: "characters#all_characters"
 end
